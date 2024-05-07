@@ -1,5 +1,24 @@
 const prompt = require("prompt-sync")();
 
+// global variables
+
+const ROWS = 3;
+const COLS = 3;
+
+const SYMBOLS_COUNT = {
+  A: 2,
+  B: 4,
+  C: 6,
+  D: 8,
+};
+
+const SYMBOLS_VALUES = {
+  A: 5,
+  B: 4,
+  C: 3,
+  D: 2,
+};
+
 const deposit = () => {
   while (true) {
     const depositAmount = prompt("Enter a deposit amount: ");
@@ -12,6 +31,7 @@ const deposit = () => {
     }
   }
 };
+
 const depositAmount = deposit();
 console.log(depositAmount);
 
@@ -23,7 +43,7 @@ const getNumberOfLines = () => {
     if (isNaN(numberOfLines) || numberOfLines <= 0 || numberOfLines > 3) {
       console.log("invalid number of lines,try again");
     } else {
-      return numberOflines;
+      return numberOfLines;
     }
   }
 };
